@@ -40,7 +40,7 @@ jobs:
             [target.armv7-unknown-linux-gnueabihf]
             pre-build = [
               "dpkg --add-architecture $CROSS_DEB_ARCH",
-              "apt-get update && apt-get install --assume-yes openssl libssl-dev:$CROSS_DEB_ARCH"
+              "apt-get update && apt-get install libssl-dev -y"
             ]
           EOF
 
